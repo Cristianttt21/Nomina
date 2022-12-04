@@ -108,7 +108,7 @@ public class CalculaSueldo {
 					break;
 				}
 			} catch (InputMismatchException e) {
-				System.out.println("Debes introducir un numero");
+				System.out.println("Debes introducir una cantidad numerica referente al salario");
 				in.next();
 			}
 			in.ioException();
