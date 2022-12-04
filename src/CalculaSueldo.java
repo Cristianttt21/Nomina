@@ -29,7 +29,7 @@ public class CalculaSueldo {
 			System.out.println(" **************************************** ");
 			System.out.println(" ***************** MENU ***************** ");
 			System.out.println(" **************************************** ");
-			System.ou0t.println(" \n\n ");
+			System.out.println(" \n\n ");
 			System.out.println(" 1. REGISTRAR NOTAS POR ALUMNO ");
 			System.out.println(" 2. VERIFICAR NOTAS POR ALUMNO ");
 			System.out.println(" 3. NOTAS DEFINITIVAS  ALUMNOS ");
@@ -42,38 +42,13 @@ public class CalculaSueldo {
 
 				switch (Opcion) {
 
-				case 1: { // REGISTRAR NOTAS POR ALUMNO
-					// Inicialmente capturamos los datos del estudiante y las notas para luego
-					// enviarlas como parametros a la clase estudiante
-					// la cual contiene la logica para manejar el arraylist
-
-					in.nextLine();
-					System.out.println("Ingrese Nombre: ");
-					nomEmpl = in.nextLine();
-					empleado.add(new Empleado(nomEmpl)); 
-				}
+				case 1: 
 					break;
 
-				case 2: // VERIFICAR NOTAS POR ALUMNO
-					// permite recorrer el arreglo y muestra la informacion ingresada
-
-					for (int i = 0; i < Estudiante.size(); i++) {
-						System.out.println(
-								"alumnos: " + Estudiante.get(i).getNombre() + " " + Estudiante.get(i).getNota1() + " "
-										+ Estudiante.get(i).getNota2() + " " + Estudiante.get(i).getNota3());
-					}
+				case 2: 
 					break;
 
-				case 3: // NOTAS DEFINITIVAS ALUMNOS
-					// realiza el recorrido del arreglo tomando las notas del estudiente y
-					// calculando el promedio ponderado.
-					for (int i = 0; i < Estudiante.size(); i++) {
-						float definitiva = (float) ((Estudiante.get(i).getNota1() * 0.30)
-								+ (Estudiante.get(i).getNota2() * 0.30) + (Estudiante.get(i).getNota3() * 0.40));
-						System.out.println("alumno: " + Estudiante.get(i).getNombre() + " "
-								+ Estudiante.get(i).getNota1() + " " + Estudiante.get(i).getNota2() + " "
-								+ Estudiante.get(i).getNota3() + " = " + definitiva);
-					}
+				case 3: 
 					break;
 			
 				case 8: { // SALIR DE LA APLICACION
