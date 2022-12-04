@@ -67,7 +67,7 @@ public class CalculaSueldo {
 					System.out.println("La cantidad de empleados registrados es: "+ empleado.size() + "\n\n");
 					for (int i = 0; i < empleado.size(); i++) {
 						System.out.println(
-								"Empleado: " + empleado.get(i).getNombre() + " Salario $: " + empleado.get(i).getSueldo());
+								"Empleado: " + empleado.get(i).getNombre() + "  --- "  + " Salario $: " + empleado.get(i).getSueldo());
 
 					}
 				}
@@ -80,18 +80,18 @@ public class CalculaSueldo {
 						
 								
 								if(Sueldo <= 5289934) {
-									System.out.println("Empleado: " + empleado.get(i).getNombre() + " Salario $ : " + empleado.get(i).getSueldo()
-									+ " Descuento por pension Pension: $" + (empleado.get(i).getSueldo() * 0.04) +" Descuento por Salud: $" +
-								   (empleado.get(i).getSueldo() * 0.04) + " Salario Neto (con descuentos): $" + ( empleado.get(i).getSueldo()
+									System.out.println("Empleado: " + empleado.get(i).getNombre() +" --- " + " Salario $ : " + empleado.get(i).getSueldo()
+									+" --- "+ " Descuento por Pension: $" + (empleado.get(i).getSueldo() * 0.04) +" --- "+" Descuento por Salud: $" +
+								   (empleado.get(i).getSueldo() * 0.04) +" --- "+ " Salario Neto (con descuentos): $" + ( empleado.get(i).getSueldo()
 								   - empleado.get(i).getSueldo() * 0.08));
 					}
 								else {
-									System.out.println("Empleado: " + empleado.get(i).getNombre() + " Salario $ : " + empleado.get(i).getSueldo()
-									+ " Descuento por pension Pension: $" + (empleado.get(i).getSueldo() * 0.05) +" Descuento por Salud: $" +
-								   (empleado.get(i).getSueldo() * 0.05) + " Retefuente: " + "" + " Salario Neto (con descuentos): $" + 
+									System.out.println("Empleado: " + empleado.get(i).getNombre() +" --- "+ " Salario $ : " + empleado.get(i).getSueldo()
+									+" --- " +" Descuento por pension Pension: $" + (empleado.get(i).getSueldo() * 0.05) +" --- "+" Descuento por Salud: $" +
+								   (empleado.get(i).getSueldo() * 0.05) +" --- " +" Retefuente: " + " --- " + " Salario Neto (con descuentos): $" + 
 									( empleado.get(i).getSueldo() - empleado.get(i).getSueldo() * 0.1) );
-									 	
-								}
+							
+								}		 	
 				
 				}
 				}
