@@ -16,7 +16,7 @@ public class CalculaSueldo {
 		// Declaracion de variables
 		String nomEmpl = "";
 		float Sueldo = 0;
-		int Opcion = 0;
+		int Opcion = 0, x=0;
 		boolean salir = false;
 		// inicializacion metodo escanner
 		Scanner in = new Scanner(System.in); // Inicializamos scanner para leer numeros
@@ -42,6 +42,18 @@ public class CalculaSueldo {
 				switch (Opcion) {
 
 				case 1: 
+					System.out.println("Por favor ingrese el nombre del primer empleado");
+					nomEmpl = in.nextLine();
+					in.nextLine();
+					if (x==0) {
+						System.out.println("Por favor ingrese el salario del primer");
+						Sueldo = in.nextFloat();
+						x++;
+					} else {
+						Sueldo = (float) (Sueldo / 0.10 + Sueldo);
+						System.out.println(Sueldo);
+					}
+					empleado.add(new Empleado(nomEmpl, Sueldo));
 					break;
 
 				case 2: 
