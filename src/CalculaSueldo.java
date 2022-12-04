@@ -15,7 +15,7 @@ public class CalculaSueldo {
 		 */
 		// Declaracion de variables
 		String nomEmpl = "";
-		float Sueldo = 0;
+		float Sueldo = 0, salarioMinimo = 1000000;
 		int Opcion = 0, contnom = 1, contsuel = 1;
 		boolean salir = false;
 		boolean DeclSalario = false;
@@ -32,8 +32,8 @@ public class CalculaSueldo {
 			System.out.println(" \n\n ");
 			System.out.println(" 1. REGISTRAR EMPLEADO");
 			System.out.println(" 2. VERIFICAR LISTA DE EMPLEADOS ");
-			System.out.println(" 3. REGISTRAR SALARIO INICIAL ");
-			System.out.println(" 8. SALIR DE LA APLICACION ");
+			System.out.println(" 3. DESPRENDIBLE DE PAGOS ");
+			System.out.println(" 0. SALIR DE LA APLICACION ");
 
 			try { // permite capturar cuando el valor ingresado no corresponde al menu o a un
 					// numero valido
@@ -63,18 +63,41 @@ public class CalculaSueldo {
 					break;
 
 				case 2:
+				{
+					System.out.println("La cantidad de empleados registrados es: "+ empleado.size() + "\n\n");
 					for (int i = 0; i < empleado.size(); i++) {
 						System.out.println(
-								"Empleado: " + empleado.get(i).getNombre() + " $: " + empleado.get(i).getSueldo());
+								"Empleado: " + empleado.get(i).getNombre() + " Salario $: " + empleado.get(i).getSueldo());
 
 					}
-
+				}
 					break;
 
 				case 3:
+				{
+
+					for (int i = 0; i < empleado.size(); i++) {
+						
+								
+								if(Sueldo <= 5289934) {
+									System.out.println("Empleado: " + empleado.get(i).getNombre() + " Salario $ : " + empleado.get(i).getSueldo()
+									+ " Descuento por pension Pension: $" + (empleado.get(i).getSueldo() * 0.04) +" Descuento por Salud: $" +
+								   (empleado.get(i).getSueldo() * 0.04) + " Salario Neto (con descuentos): $" + ( empleado.get(i).getSueldo()
+								   - empleado.get(i).getSueldo() * 0.08));
+					}
+								else {
+									System.out.println("Empleado: " + empleado.get(i).getNombre() + " Salario $ : " + empleado.get(i).getSueldo()
+									+ " Descuento por pension Pension: $" + (empleado.get(i).getSueldo() * 0.05) +" Descuento por Salud: $" +
+								   (empleado.get(i).getSueldo() * 0.05) + " Retefuente: " + "" + " Salario Neto (con descuentos): $" + 
+									( empleado.get(i).getSueldo() - empleado.get(i).getSueldo() * 0.1) );
+									 	
+								}
+				
+				}
+				}
 					break;
 
-				case 8: { // SALIR DE LA APLICACION
+				case 0: { // SALIR DE LA APLICACION
 					salir = true;
 					System.out.println("Salida del programa");
 					in.close();
