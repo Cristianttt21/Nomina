@@ -16,8 +16,7 @@ public class CalculaSueldo {
 		// Declaracion de variables
 		String nomEmpl = "";
 		float Sueldo = 0;
-		int Opcion, reprobados = 0;
-		int aprobados = 0;
+		int Opcion = 0;
 		boolean salir = false;
 		// inicializacion metodo escanner
 		Scanner in = new Scanner(System.in); // Inicializamos scanner para leer numeros
@@ -30,9 +29,9 @@ public class CalculaSueldo {
 			System.out.println(" ***************** MENU ***************** ");
 			System.out.println(" **************************************** ");
 			System.out.println(" \n\n ");
-			System.out.println(" 1. REGISTRAR NOTAS POR ALUMNO ");
-			System.out.println(" 2. VERIFICAR NOTAS POR ALUMNO ");
-			System.out.println(" 3. NOTAS DEFINITIVAS  ALUMNOS ");
+			System.out.println(" 1. REGISTRAR EMPLEADO");
+			System.out.println(" 2. VERIFICAR LISTA DE EMPLEADOS ");
+			System.out.println(" 3. REGISTRAR SALARIO INICIAL ");
 			System.out.println(" 8. SALIR DE LA APLICACION ");
 
 			try { // permite capturar cuando el valor ingresado no corresponde al menu o a un
