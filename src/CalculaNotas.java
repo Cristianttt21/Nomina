@@ -62,7 +62,7 @@ public class CalculaNotas {
 						System.out.println("Ingrese Primer Nota: ");
 						prim_nota = in.nextFloat();
 					} while (((prim_nota >= 0) && (prim_nota <= 5)) == false);
-					
+
 					do {
 						System.out.println("Ingrese Segunda Nota: ");
 						seg_nota = in.nextFloat();
@@ -81,9 +81,9 @@ public class CalculaNotas {
 					// permite recorrer el arreglo y muestra la informacion ingresada
 
 					for (int i = 0; i < Estudiante.size(); i++) {
-						System.out
-								.println("alumnos: " + Estudiante.get(i).getNombre() + " " + Estudiante.get(i).getNota1()
-										+ " " + Estudiante.get(i).getNota2() + " " + Estudiante.get(i).getNota3());
+						System.out.println(
+								"alumnos: " + Estudiante.get(i).getNombre() + " " + Estudiante.get(i).getNota1() + " "
+										+ Estudiante.get(i).getNota2() + " " + Estudiante.get(i).getNota3());
 					}
 					break;
 
