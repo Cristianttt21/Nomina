@@ -44,19 +44,26 @@ public class CalculaSueldo {
 				case 1: 
 					System.out.println("Por favor ingrese el nombre del primer empleado");
 					nomEmpl = in.nextLine();
-					in.nextLine();
+					nomEmpl = in.nextLine();
 					if (x==0) {
-						System.out.println("Por favor ingrese el salario del primer");
+						System.out.println("Por favor ingrese el salario del primer empleado:  ");
 						Sueldo = in.nextFloat();
 						x++;
 					} else {
-						Sueldo = (float) (Sueldo / 0.10 + Sueldo);
-						System.out.println(Sueldo);
+						Sueldo = (float) (Sueldo * 0.10 + Sueldo);
+						
 					}
 					empleado.add(new Empleado(nomEmpl, Sueldo));
 					break;
 
 				case 2: 
+					for(int i = 0; i < empleado.size();i++ ) {
+						System.out.println("Empleado: " +  empleado.get(i).getNombre() + " $: " + empleado.get(i).getSueldo()); 		
+						
+					}
+					
+						
+					
 					break;
 
 				case 3: 
