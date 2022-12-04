@@ -1,20 +1,4 @@
-/*
- * * ACTIVIDAD 3 - Programa 3 -  Programación Estructurada
- * 
- * Presentado por:		RODRIGO ZUNIGA LOPEZ
- * Identificacion: 		80168000
- * 
- * Un curso de Matemáticas tiene N estudiantes, donde la nota definitiva se calcula mediante 3 cortes,
- * donde el primer corte vale 30%, el segundo corte vale 30% y el tercer corte vale el 40% de la nota 
- * definitiva. Crear un algoritmo que permita almacenar las notas parciales de cada estudiante para 
- * posteriormente saber quiénes aprueban y pierden la materia, así como el promedio de alumnos que pierden
- * la materia.
- * Se deben desarrollar métodos para conocer los estudiantes que pierden la materia, quienes aprueban y el
- * promedio del curso. De igual manera generar un procedimiento que permita aumentar en un 10% las notas 
- * definitivas de los estudiantes que perdieron la materia.
- */
 
-// importamos las librerias que vamos a utilizar
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
