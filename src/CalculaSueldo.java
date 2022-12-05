@@ -15,7 +15,7 @@ public class CalculaSueldo {
 		 */
 		// Declaracion de variables
 		String nomEmpl = "";
-		float Sueldo = 0, salarioMinimo = 1000000;
+		float Sueldo = 0;
 		int Opcion = 0, contnom = 1, contsuel = 1;
 		boolean salir = false;
 		boolean DeclSalario = false;
@@ -80,16 +80,16 @@ public class CalculaSueldo {
 						
 								
 								if(Sueldo <= 5289934) {
-									System.out.println("Empleado: " + empleado.get(i).getNombre() +" --- " + " Salario $ : " + empleado.get(i).getSueldo()
-									+" --- "+ " Descuento por Pension: $" + (empleado.get(i).getSueldo() * 0.04) +" --- "+" Descuento por Salud: $" +
-								   (empleado.get(i).getSueldo() * 0.04) +" --- "+ " Salario Neto (con descuentos): $" + ( empleado.get(i).getSueldo()
+									System.out.println("Empleado: " + empleado.get(i).getNombre() +" \n\t--- " + " Salario $ : " + empleado.get(i).getSueldo()
+									+" \n\t--- "+ " Descuento por Pension: $" + (empleado.get(i).getSueldo() * 0.04) +" \n\t--- "+" Descuento por Salud: $" +
+								   (empleado.get(i).getSueldo() * 0.04) +" \n--- "+ " Salario Neto (con descuentos): $" + ( empleado.get(i).getSueldo()
 								   - empleado.get(i).getSueldo() * 0.08));
 					}
 								else {
-									System.out.println("Empleado: " + empleado.get(i).getNombre() +" --- "+ " Salario $ : " + empleado.get(i).getSueldo()
-									+" --- " +" Descuento por pension Pension: $" + (empleado.get(i).getSueldo() * 0.05) +" --- "+" Descuento por Salud: $" +
-								   (empleado.get(i).getSueldo() * 0.05) +" --- " +" Retefuente: " + " --- " + " Salario Neto (con descuentos): $" + 
-									( empleado.get(i).getSueldo() - empleado.get(i).getSueldo() * 0.1) );
+									System.out.println("Empleado: " + empleado.get(i).getNombre() +" \n\t--- "+ " Salario $ : " + empleado.get(i).getSueldo()
+									+" \n\t--- " +" Descuento por pension Pension: $" + (empleado.get(i).getSueldo() * 0.05) +" \n\t--- "+" Descuento por Salud: $" +
+								   (empleado.get(i).getSueldo() * 0.05) +" \n\t--- " +" Retefuente: " + (empleado.get(i).getSueldo() * 0.14) +" \n--- "+ " Salario Neto (con descuentos): $" + 
+									( empleado.get(i).getSueldo() - empleado.get(i).getSueldo() * 0.1 - (empleado.get(i).getSueldo() * 0.14)) );
 							
 								}		 	
 				
