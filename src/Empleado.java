@@ -2,7 +2,7 @@
 public class Empleado {
 
 	private String nombre;   //declara variables a utilizar localmente
-	private float Sueldo;
+	private double Sueldo;
 
 	public Empleado(String nombre, float Sueldo) {
 		this.nombre = nombre;
@@ -17,7 +17,7 @@ public class Empleado {
 		this.nombre = nombre;
 	}
 
-	public float getSueldo() {
+	public double getSueldo() {
 		return Sueldo;
 	}
 

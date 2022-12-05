@@ -26,14 +26,15 @@ public class CalculaSueldo {
 		// salir sea falsa la cual esta dentro del menu en la opcion 8
 		while (!salir) {
 
-			System.out.println(" **************************************** ");
+			System.out.println(" \n\n **************************************** ");
 			System.out.println(" ***************** MENU ***************** ");
-			System.out.println(" **************************************** ");
-			System.out.println(" \n\n ");
+			System.out.println(" **************************************** \n\nDigite la opcion deseada:");
+			System.out.println(" \n");
 			System.out.println(" 1. REGISTRAR EMPLEADO");
 			System.out.println(" 2. VERIFICAR LISTA DE EMPLEADOS ");
 			System.out.println(" 3. DESPRENDIBLE DE PAGOS ");
 			System.out.println(" 0. SALIR DE LA APLICACION ");
+			System.out.println(" \n\n ");
 
 			try { // permite capturar cuando el valor ingresado no corresponde al menu o a un
 					// numero valido
@@ -67,7 +68,7 @@ public class CalculaSueldo {
 					System.out.println("La cantidad de empleados registrados es: "+ empleado.size() + "\n\n");
 					for (int i = 0; i < empleado.size(); i++) {
 						System.out.println(
-								"Empleado: " + empleado.get(i).getNombre() + "  --- "  + " Salario $: " + empleado.get(i).getSueldo());
+								"Empleado: " + empleado.get(i).getNombre() + "  --- "  + " Salario $: " + String.format("%.2f",empleado.get(i).getSueldo()));
 
 					}
 				}
@@ -80,16 +81,16 @@ public class CalculaSueldo {
 						
 								
 								if(Sueldo <= 5289934) {
-									System.out.println("Empleado: " + empleado.get(i).getNombre() +" \n\t--- " + " Salario $ : " + empleado.get(i).getSueldo()
+									System.out.println("Empleado: " + empleado.get(i).getNombre() +" \n\t--- " + " Salario $ : " + String.format("%.2f",empleado.get(i).getSueldo())
 									+" \n\t--- "+ " Descuento por Pension: $" + (empleado.get(i).getSueldo() * 0.04) +" \n\t--- "+" Descuento por Salud: $" +
-								   (empleado.get(i).getSueldo() * 0.04) +" \n--- "+ " Salario Neto (con descuentos): $" + ( empleado.get(i).getSueldo()
-								   - empleado.get(i).getSueldo() * 0.08));
+								   (empleado.get(i).getSueldo() * 0.04) +" \n--- "+ " Salario Neto (con descuentos): $" + String.format("%.2f",( empleado.get(i).getSueldo()
+								   - empleado.get(i).getSueldo() * 0.08)));
 					}
 								else {
-									System.out.println("Empleado: " + empleado.get(i).getNombre() +" \n\t--- "+ " Salario $ : " + empleado.get(i).getSueldo()
+									System.out.println("Empleado: " + empleado.get(i).getNombre() +" \n\t--- "+ " Salario $ : " + String.format("%.2f",empleado.get(i).getSueldo())
 									+" \n\t--- " +" Descuento por pension Pension: $" + (empleado.get(i).getSueldo() * 0.05) +" \n\t--- "+" Descuento por Salud: $" +
-								   (empleado.get(i).getSueldo() * 0.05) +" \n\t--- " +" Retefuente: " + (empleado.get(i).getSueldo() * 0.14) +" \n--- "+ " Salario Neto (con descuentos): $" + 
-									( empleado.get(i).getSueldo() - empleado.get(i).getSueldo() * 0.1 - (empleado.get(i).getSueldo() * 0.14)) );
+								   (empleado.get(i).getSueldo() * 0.05) +" \n\t--- " +" Retefuente: " + String.format("%.2f",(empleado.get(i).getSueldo() * 0.14)) +" \n--- "+ " Salario Neto (con descuentos): $" + 
+								   String.format("%.2f",( empleado.get(i).getSueldo() - empleado.get(i).getSueldo() * 0.1 - (empleado.get(i).getSueldo() * 0.14))) );
 							
 								}		 	
 				
@@ -99,7 +100,7 @@ public class CalculaSueldo {
 
 				case 0: { // SALIR DE LA APLICACION
 					salir = true;
-					System.out.println("Salida del programa");
+					System.out.println("Salida del programa\n\nGracias por usar esta aplicacion:\n\nCreadores:\nMateo Castro\nCristian Paez\nRodrigo Zuniga");
 					in.close();
 				}
 					break;
